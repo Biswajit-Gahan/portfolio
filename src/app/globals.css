@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-sans: "Geist", sans-serif;
+    --font-mono: "Geist Mono", monospace;
+    --font-mohave: "Mohave", sans-serif;
+    --font-monda: "Monda", sans-serif;
+    --color-primary: #F50F46;
+    --color-secondary: #f5990f;
+    --color-tertiary: #43a506;
+    --color-dark: rgba(23, 23, 23, 1);
+    --color-light: rgba(250, 250, 250, 1);
+}
+
+@layer base {
+    html, body {
+        @apply antialiased font-sans dark:bg-dark dark:text-light text-base overflow-x-clip;
+    }
+}
+
+@utility container-auto {
+    @apply container m-auto px-3.5 lg:px-20;
+}
+

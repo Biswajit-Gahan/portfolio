@@ -3,9 +3,14 @@ import circularName from "@/assets/circular-name.svg";
 import brandIcon from "@/assets/brand-icon.svg";
 import brandLogo from "@/assets/brand-logo.svg";
 
-function NameMarquee() {
-    return <div className={"flex items-center gap-10"}>
+function NameMarquee({ariaDisabled = true}) {
+    return <div aria-disabled={ariaDisabled} className={"flex items-center gap-10"}>
         <p className={"text-[clamp(10rem,5vw,5rem)] font-black italic text-nowrap leading-30 text-neutral-700/50"}>THANK YOU</p>
+        <div className={"relative flex items-center justify-center w-[8rem]"}>
+            <Image src={circularName} className={"absolute animate-[spin_10s_linear_infinite]"} alt={"shaik"} />
+            <Image src={brandIcon} alt={"icon"} />
+        </div>
+        <p className={"text-[clamp(10rem,5vw,5rem)] font-black italic text-nowrap leading-30 text-neutral-700/50"}>SEE YOU AGAIN</p>
         <div className={"relative flex items-center justify-center w-[8rem]"}>
             <Image src={circularName} className={"absolute animate-[spin_10s_linear_infinite]"} alt={"shaik"} />
             <Image src={brandIcon} alt={"icon"} />
@@ -16,8 +21,12 @@ function NameMarquee() {
 export default function FooterSection() {
     return <section className={"mt-8"}>
         <div className={"flex"}>
-            <NameMarquee/>
-            <NameMarquee/>
+            <div className={"flex items-center animate-auto-run"}>
+                <NameMarquee ariaDisabled={false}/>
+                <NameMarquee/>
+                <NameMarquee/>
+                <NameMarquee/>
+            </div>
         </div>
         <footer className={"mt-8 bg-neutral-700/50"}>
             <div className={"flex flex-col lg:flex-row font-semibold text-sm text-neutral-500 gap-1 items-center justify-between container-auto py-3"}>

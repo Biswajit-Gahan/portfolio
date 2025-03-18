@@ -4,7 +4,7 @@ import Navigation from "@/components/feature/navbar-section/sub-components/navig
 import HamburgerMenu from "@/components/feature/navbar-section/sub-components/hamburger-menu";
 
 export default function NavbarSection() {
-    return <nav className={"sticky top-0 bg-dark/10 backdrop-blur-lg font-monda z-[999]"}>
+    return <nav className={"sticky top-0 before:content-[''] before:absolute before:w-full before:h-full before:bg-dark/10 before:backdrop-blur-lg font-light z-[999]"}>
         <div className={"container-auto relative flex items-center justify-between h-15 lg:h-20"}>
             <div>
                 <BrandName/>

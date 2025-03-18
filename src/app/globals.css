@@ -12,6 +12,13 @@
     --color-tertiary: #43a506;
     --color-dark: rgba(23, 23, 23, 1);
     --color-light: rgba(250, 250, 250, 1);
+
+    --animate-auto-run: auto-run 40s linear infinite;
+    @keyframes auto-run {
+        to {
+            transform: translateX(-50%);
+        }
+    }
 }
 
 @layer base {

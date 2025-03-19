@@ -1,11 +1,19 @@
+"use client";
+
+import {useRef} from "react";
+import useAnimationObserver from "@/hooks/use-animation-observer";
+
 function HeroFooterLocation({heading, location}) {
-    return <div className={"flex flex-col"}>
-        <div className={"flex items-center space-x-2 hide-element animate-[slide-up_1s_1s_forwards]"}>
+    const heroFooterLocationRef = useRef(null);
+    const {isIntersect} = useAnimationObserver(heroFooterLocationRef);
+
+    return <div ref={heroFooterLocationRef} className={"flex flex-col"}>
+        <div className={`flex items-center space-x-2 hide-element ${isIntersect && "animate-[slide-up_1s_1s_forwards]"}`}>
             <div
                 className={`w-2 h-2 rounded-full ${heading.toLowerCase() === "work location" ? "bg-tertiary" : "bg-secondary"} relative after:content-[''] after:absolute  ${heading.toLowerCase() === "work location" ? "after:bg-tertiary" : "after:bg-secondary"} after:w-full after:h-full after:rounded-full after:animate-ping`}/>
             <span className={"text-[0.6rem] lg:text-xs"}>{heading}<span>.</span></span>
         </div>
-        <span className={"text-[0.7rem] lg:text-base hide-element animate-[slide-up_1s_1.3s_forwards]"}>{location}</span>
+        <span className={`text-[0.7rem] lg:text-base hide-element ${isIntersect && "animate-[slide-up_1s_1.3s_forwards]"}`}>{location}</span>
     </div>
 }
 

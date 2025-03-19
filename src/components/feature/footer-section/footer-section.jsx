@@ -22,19 +22,21 @@ export default function FooterSection() {
     return <section className={"mt-8"}>
         <div className={"flex"}>
             <div className={"flex items-center animate-auto-run"}>
-                <NameMarquee ariaDisabled={false}/>
-                <NameMarquee/>
-                <NameMarquee/>
-                <NameMarquee/>
+                {
+                    Array.from({ length: 4 }).map((_, i) => (
+                        <NameMarquee key={i + 1} ariaDisabled={i !== 0} />
+                    ))
+                }
             </div>
         </div>
         <footer className={"mt-8 bg-neutral-700/50"}>
-            <div className={"flex flex-col lg:flex-row font-semibold text-sm text-neutral-500 gap-1 items-center justify-between container-auto py-3"}>
+            <div className={"flex flex-col lg:flex-row font-semibold text-sm text-neutral-500 gap-2.5 items-center justify-between container-auto py-5"}>
                 <div className={"flex items-center gap-2"}>
                     <Image className={"w-15"} src={brandLogo} alt={"shaik"} />
-                    <span >SHAIK's Portfolio | {new Date().getFullYear()}</span>
+                    <span className={"text-xs uppercase"}>SHAIK's Portfolio | {new Date().getFullYear()}</span>
                 </div>
-                <span>Designed and developed by Biswajit Gahan.</span>
+                <hr className={"w-20 h-[0.07rem] bg-neutral-700 border-0 lg:hidden"}/>
+                <span className={"text-xs uppercase"}>Designed and developed by Biswajit Gahan.</span>
             </div>
         </footer>
     </section>

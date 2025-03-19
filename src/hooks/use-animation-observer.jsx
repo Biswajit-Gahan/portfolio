@@ -15,7 +15,7 @@ export default function useAnimationObserver(...refs) {
             })
         }
 
-        const animationObserver = new IntersectionObserver(observerHandler, {threshold: 0.1});
+        const animationObserver = new IntersectionObserver(observerHandler, {threshold: 0.3});
         refs.forEach(ref => {
             animationObserver.observe(ref.current);
         })

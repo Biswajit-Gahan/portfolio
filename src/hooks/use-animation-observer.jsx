@@ -10,7 +10,7 @@ export default function useAnimationObserver(...refs) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     setIsIntersect(true);
-                    animationObserver.unobserve(entry.target);
+                    animationObserver?.unobserve(entry.target);
                 }
             })
         }

@@ -5,7 +5,7 @@ import PhotoSection from "@/components/feature/about-section/sub-components/phot
 import AboutMeSection from "@/components/feature/about-section/sub-components/about-me-section";
 
 export default function AboutSection() {
-    return <section className={"container-auto grid grid-rows-12 grid-cols-4 lg:grid-rows-8 lg:grid-cols-8 h-[50rem] lg:h-[42rem] mt-5 lg:mt-8 gap-2.5 lg:gap-4 [&>*]:bg-light/2  [&>*]:rounded-md"}>
+    return <section id={"about"} className={"container-auto grid grid-rows-12 grid-cols-4 lg:grid-rows-8 lg:grid-cols-8 h-[50rem] lg:h-[42rem] mt-5 lg:mt-8 gap-2.5 lg:gap-4 [&>*]:bg-light/2  [&>*]:rounded-md"}>
         <TagSection />
         <SocialSection />
         <AchievementsSection />

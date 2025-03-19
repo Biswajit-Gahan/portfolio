@@ -14,17 +14,18 @@ export default function ExperienceCard(
         workDescription,
         companyImage,
         imageName,
-        hidden = true,
+        active,
+        onClick,
     }
 ) {
-    return <div className={`lg:flex ${!hidden && "lg:flex-auto"}`}>
+    return <div className={`lg:flex ${active && "lg:flex-auto"} duration-300 transition-all`}>
         <div className={"flex items-center justify-between lg:flex-col-reverse bg-neutral-600/10 py-3 px-5 lg:py-5 border-1 border-neutral-700/50"}>
             <span className={"lg:[writing-mode:vertical-lr] lg:rotate-180"}>{duration}</span>
-            <button className={"flex items-center justify-center p-2 rounded-full border-1 border-neutral-700/50 cursor-pointer"}>
-                <MdOutlineArrowBack className={"w-4 h-4 rotate-180"} />
+            <button className={"flex items-center justify-center p-2 rounded-full border-1 border-neutral-700/50 cursor-pointer"} onClick={onClick}>
+                <MdOutlineArrowBack className={`w-4 h-4 ${active ? "rotate-180" : "rotate-135"} duration-300 transition-transform`} />
             </button>
         </div>
-        <div className={`border-1 bg-neutral-600/10  border-neutral-700/50 p-5 ${hidden && "hidden"} ${!hidden && "lg:w-full"} relative `}>
+        <div className={`border-1 bg-neutral-600/10  border-neutral-700/50 p-5 ${!active && "hidden"} ${active ? "lg:w-full" : "lg:w-0"}`}>
             <p className={"text-[clamp(1.3rem,3vw,2rem)] font-black"}>{companyName}</p>
             <Link href={companyWebsiteUrl} className={"flex items-center gap-1 mt-1 text-neutral-500 text-sm underline"}>
                 <LiaGlobeAmericasSolid /> {companyWebsiteName}

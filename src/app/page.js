@@ -6,7 +6,7 @@ import FooterSection from "@/components/feature/footer-section/footer-section";
 import NavbarSection from "@/components/feature/navbar-section/navbar-section";
 
 export default function Home() {
-    return <main>
+    return <main className={"home"}>
         {/*NAVBAR SECTION*/}
         <NavbarSection/>
 

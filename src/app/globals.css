@@ -78,6 +78,10 @@
     @apply opacity-0 invisible;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
 
 body {
     --sb-track-color: #434343;

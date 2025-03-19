@@ -8,6 +8,7 @@ import {TiSocialFacebook, TiSocialLinkedin} from "react-icons/ti";
 import {RiTwitterXFill} from "react-icons/ri";
 import {IoLogoInstagram} from "react-icons/io5";
 import useHamburgerMenu from "@/components/feature/navbar-section/utils/use-hamburger-menu";
+import menuData from "../utils/menu-data";
 
 export default function HamburgerMenu() {
     const {
@@ -22,40 +23,25 @@ export default function HamburgerMenu() {
                 <div className={"w-full relative p-5"}>
                     <Image src={brandLogo} className={"block m-auto"} alt={"shaik"} />
                     <ul className={"flex flex-wrap mt-8 justify-center gap-3"}>
-                        <li onClick={toggleHamburgerMenu}>
-                            <Link className={"bg-neutral-100/10 font-sans text-sm px-6 py-2 block rounded-full"} href={"/#home"}>Home</Link>
-                        </li>
-                        <li onClick={toggleHamburgerMenu}>
-                            <Link className={"bg-neutral-100/10 font-sans text-sm px-6 py-2 block rounded-full"} href={"/#about"}>About</Link>
-                        </li>
-                        <li onClick={toggleHamburgerMenu}>
-                            <Link className={"bg-neutral-100/10 font-sans text-sm px-6 py-2 block rounded-full"} href={"/#work"}>Work</Link>
-                        </li>
-                        <li onClick={toggleHamburgerMenu}>
-                            <Link className={"bg-neutral-100/10 font-sans text-sm px-6 py-2 block rounded-full"} href={"/#contact"}>Contact</Link>
-                        </li>
+                        {
+                            menuData.hamburgerMenuLinks.map((menu, index) => (
+                                <li onClick={toggleHamburgerMenu} key={index + 1}>
+                                    <Link className={"bg-neutral-100/10 font-sans text-sm px-6 py-2 block rounded-full"} href={menu.href}>{menu.linkText}</Link>
+                                </li>
+                            ))
+                        }
                     </ul>
                     <ul className={"flex mt-8 justify-center gap-2"}>
-                        <li onClick={toggleHamburgerMenu} className={"flex"}>
-                            <Link className={"block p-1.5 bg-neutral-100/10 rounded-full"} href={"#"}>
-                                <TiSocialFacebook size={23}/>
-                            </Link>
-                        </li>
-                        <li onClick={toggleHamburgerMenu} className={"flex"}>
-                            <Link className={"block p-1.5 bg-neutral-100/10 rounded-full"} href={"#"}>
-                                <TiSocialLinkedin size={23}/>
-                            </Link>
-                        </li>
-                        <li onClick={toggleHamburgerMenu} className={"flex"}>
-                            <Link className={"block p-1.5 bg-neutral-100/10 rounded-full"} href={"#"}>
-                                <RiTwitterXFill size={23}/>
-                            </Link>
-                        </li>
-                        <li onClick={toggleHamburgerMenu} className={"flex"}>
-                            <Link className={"block p-1.5 bg-neutral-100/10 rounded-full"} href={"#"}>
-                                <IoLogoInstagram size={23}/>
-                            </Link>
-                        </li>
+                        {
+                            menuData.socialLinks.map((social, index) => {
+                                const IconComponent = social.image
+                                return <li key={index + 1} onClick={toggleHamburgerMenu} className={"flex"}>
+                                    <Link className={"block p-1.5 bg-neutral-100/10 rounded-full"} href={social.link} target={"_blank"}>
+                                        <IconComponent size={23}/>
+                                    </Link>
+                                </li>
+                            })
+                        }
                     </ul>
                 </div>
             </div>

@@ -74,6 +74,10 @@
     @apply container m-auto px-3.5 lg:px-20;
 }
 
+@utility gradient-mask {
+    mask-image: linear-gradient(to right, transparent, rgba(23, 23, 23, 1) 3rem, rgba(23, 23, 23, 1) calc(100% - 3rem), transparent);
+}
+
 @utility hide-element {
     @apply opacity-0 invisible;
 }

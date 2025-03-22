@@ -2,6 +2,7 @@ import Image from "next/image";
 import circularName from "@/assets/circular-name.svg";
 import brandIcon from "@/assets/brand-icon.svg";
 import brandLogo from "@/assets/brand-logo.svg";
+import Link from "next/link";
 
 function NameMarquee({ariaDisabled = true}) {
     return <div aria-disabled={ariaDisabled} className={"flex items-center gap-10"}>
@@ -20,7 +21,7 @@ function NameMarquee({ariaDisabled = true}) {
 
 export default function FooterSection() {
     return <section className={"mt-8"}>
-        <div className={"flex"}>
+        <div className={"flex gradient-mask"}>
             <div className={"flex items-center animate-auto-run"}>
                 {
                     Array.from({ length: 4 }).map((_, i) => (
@@ -33,10 +34,10 @@ export default function FooterSection() {
             <div className={"flex flex-col lg:flex-row font-semibold text-sm text-neutral-500 gap-2.5 items-center justify-between container-auto py-5"}>
                 <div className={"flex items-center gap-2"}>
                     <Image className={"w-15"} src={brandLogo} alt={"shaik"} />
-                    <span className={"text-xs uppercase"}>SHAIK's Portfolio | {new Date().getFullYear()}</span>
+                    <span className={"text-xs font-light"}><Link className={"hover:underline"} href={"/#home"}>SHAIK's Portfolio</Link> | {new Date().getFullYear()}</span>
                 </div>
                 <hr className={"w-20 h-[0.07rem] bg-neutral-700 border-0 lg:hidden"}/>
-                <span className={"text-xs uppercase"}>Designed and developed by Biswajit Gahan.</span>
+                <span className={"text-xs font-light"}>Crafted by <Link className={"hover:underline"} href={"https://www.biswajitgahan.com"} target={"_blank"}>Biswajit Gahan.</Link></span>
             </div>
         </footer>
     </section>

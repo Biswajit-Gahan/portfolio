@@ -4,9 +4,6 @@ import {HiOutlineDotsVertical} from "react-icons/hi";
 import Image from "next/image";
 import brandLogo from "@/assets/brand-logo.svg"
 import Link from "next/link";
-import {TiSocialFacebook, TiSocialLinkedin} from "react-icons/ti";
-import {RiTwitterXFill} from "react-icons/ri";
-import {IoLogoInstagram} from "react-icons/io5";
 import useHamburgerMenu from "@/components/feature/navbar-section/utils/use-hamburger-menu";
 import menuData from "../utils/menu-data";
 

@@ -24,19 +24,19 @@ export default {
     socialLinks: [
         {
             image: TiSocialFacebook,
-            link: "https://www.facebook.com",
+            link: "#",
         },
         {
             image: RiTwitterXFill,
-            link: "https://www.x.com",
+            link: "#",
         },
         {
             image: TiSocialLinkedin,
-            link: "https://www.linkedin.com",
+            link: "https://www.linkedin.com/in/shaiksubhanifintech/",
         },
         {
             image: IoLogoInstagram,
-            link: "https://www.instagram.com",
+            link: "#",
         },
     ]
 }

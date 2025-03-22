@@ -15,16 +15,16 @@ export default function SocialSection() {
         <span className={"text-sm"}>Find me on<br/>social platforms</span>
         <ul className={"flex items-center gap-2 lg:gap-3 [&>*]:p-1 [&>*]:inline-block [&>*]:rounded-sm"}>
             <li className={"bg-blue-900"}>
-                <Link href={"#"}><TiSocialFacebook className={"w-6 h-6"}/></Link>
+                <Link href={""}><TiSocialFacebook className={"w-6 h-6"}/></Link>
             </li>
             <li className={"bg-neutral-700"}>
-                <Link href={"#"}><RiTwitterXFill className={"w-6 h-6"}/></Link>
+                <Link href={""}><RiTwitterXFill className={"w-6 h-6"}/></Link>
             </li>
             <li className={"bg-cyan-600"}>
-                <Link href={"#"}><TiSocialLinkedin className={"w-6 h-6"}/></Link>
+                <Link href={"https://www.linkedin.com/in/shaiksubhanifintech/"} target={"_blank"}><TiSocialLinkedin className={"w-6 h-6"}/></Link>
             </li>
             <li className={"bg-pink-600"}>
-                <Link href={"#"}><IoLogoInstagram className={"w-6 h-6"}/></Link>
+                <Link href={""}><IoLogoInstagram className={"w-6 h-6"}/></Link>
             </li>
         </ul>
     </div>

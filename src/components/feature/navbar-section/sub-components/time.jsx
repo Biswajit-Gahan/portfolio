@@ -1,3 +1,9 @@
+"use client"
+
+import useGetTime from "@/components/feature/navbar-section/utils/use-get-time";
+
 export default function Time() {
-    return <p>Monday, 10:30 AM</p>
+    const {time} = useGetTime();
+
+    return <p>{time}</p>
 }

@@ -24,6 +24,9 @@ const mondaSans = Monda({
 export const metadata = {
     title: "Shaik's Portfolio",
     description: "Digital portfolio of Shaik Mahaboob Subhani.",
+    authors: [
+        {name: "Biswajit Gahan", url: "https://www.biswajitgahan.com"},
+    ]
 };
 
 export default function RootLayout({children}) {

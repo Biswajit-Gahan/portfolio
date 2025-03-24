@@ -40,7 +40,7 @@ export default [
         position: "Technology Innovation IT-Head",
         companyWebsiteUrl: "#",
         companyWebsiteName: "Kantar TNS",
-        companyImage: "assets/gfk-logo.png",
+        companyImage: "assets/kantar-tns-logo.png",
         workDescription: "Managing all the in-house software development into digital era.",
         imageName: "Kantar TNS",
     }

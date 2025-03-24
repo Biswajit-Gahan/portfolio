@@ -17,11 +17,13 @@ export default function useAnimationObserver(...refs) {
 
         const animationObserver = new IntersectionObserver(observerHandler, {threshold: 0.2});
         refs.forEach(ref => {
+            if(!ref.current) return;
             animationObserver.observe(ref.current);
         })
 
         return () => {
             refs.forEach(ref => {
+                if(!ref.current) return
                 animationObserver.unobserve(ref.current);
             })
         }

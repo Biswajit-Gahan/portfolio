@@ -1,8 +1,8 @@
 "use client";
 
 import {HiOutlineDotsVertical} from "react-icons/hi";
-import Image from "next/image";
-import brandLogo from "@/assets/brand-logo.svg"
+// import Image from "next/image";
+// import brandLogo from "@/assets/brand-logo.svg"
 import Link from "next/link";
 import useHamburgerMenu from "@/components/feature/navbar-section/utils/use-hamburger-menu";
 import menuData from "../utils/menu-data";
@@ -18,7 +18,7 @@ export default function HamburgerMenu() {
         <div className={`fixed pointer-events-none top-0 left-0 w-full h-dvh flex items-end pb-2 transition-transform duration-300 ${showHamburger ? "translate-y-0" : "translate-y-1/2"}`}>
             <div className={"relative pointer-events-auto w-full before:content-[''] before:absolute before:bg-neutral-700/10 before:w-full before:h-full before:backdrop-blur-lg rounded-2xl mx-2 overflow-clip"}>
                 <div className={"w-full relative p-5"}>
-                    <Image src={brandLogo} className={"block m-auto"} alt={"shaik"} />
+                    <img src={"/assets/brand-logo.svg"} className={"block m-auto"} alt={"shaik"} />
                     <ul className={"flex flex-wrap mt-8 justify-center gap-3"}>
                         {
                             menuData.hamburgerMenuLinks.map((menu, index) => (

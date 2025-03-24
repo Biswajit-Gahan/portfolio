@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import bgStripe from "@/assets/bg-stripe.svg";
+// import Image from "next/image";
+// import bgStripe from "@/assets/bg-stripe.svg";
 import {useRef} from "react";
 import useAnimationObserver from "@/hooks/use-animation-observer";
 
@@ -10,6 +10,6 @@ export default function HeroBackgrounds() {
     const {isIntersect} = useAnimationObserver(heroBackgroundRef);
 
     return <div>
-        <Image ref={heroBackgroundRef} className={`absolute top-1/2 left-1/2 -translate-y-1/2 hide-element ${isIntersect && "animate-slide-left"}`} src={bgStripe} alt={"background"}/>
+        <img ref={heroBackgroundRef} className={`absolute top-1/2 left-1/2 -translate-y-1/2 hide-element ${isIntersect && "animate-slide-left"}`} src={"assets/hero-bg-circle.svg"} alt={"background"}/>
     </div>
 }

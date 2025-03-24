@@ -2,7 +2,7 @@ import {MdOutlineArrowBack} from "react-icons/md";
 import Link from "next/link";
 import {LiaGlobeAmericasSolid} from "react-icons/lia";
 import {LuCalendarClock} from "react-icons/lu";
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function ExperienceCard(
     {
@@ -37,7 +37,7 @@ export default function ExperienceCard(
             </div>
             <div className={"h-0.5 bg-neutral-700/50 my-4"}/>
             <p className={"text-sm text-neutral-400"}>{workDescription}.</p>
-            <Image className={"inline-block mt-10 h-10 w-40 object-contain object-left-bottom opacity-50 lg:absolute lg:bottom-5"} src={companyImage} alt={imageName} />
+            <img className={"inline-block mt-10 h-10 w-40 object-contain object-left-bottom opacity-50 lg:absolute lg:bottom-5"} src={companyImage} alt={imageName} />
         </div>
     </div>
 }

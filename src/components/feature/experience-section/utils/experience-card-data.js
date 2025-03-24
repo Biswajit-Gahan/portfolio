@@ -1,7 +1,7 @@
-import annapurnaFinanceLogo from "@/assets/annapurna-finance-logo.png";
-import jayamLogo from "@/assets/jayam-logo.png";
-import gfkLogo from "@/assets/gfk-logo.png";
-import kantarTnsLogo from "@/assets/kantar-tns-logo.png";
+// import annapurnaFinanceLogo from "@/assets/annapurna-finance-logo.png";
+// import jayamLogo from "@/assets/jayam-logo.png";
+// import gfkLogo from "@/assets/gfk-logo.png";
+// import kantarTnsLogo from "@/assets/kantar-tns-logo.png";
 
 export default [
     {
@@ -10,7 +10,7 @@ export default [
         position: "Technology Innovation IT-Head",
         companyWebsiteUrl: "#",
         companyWebsiteName: "Annapurna Finance",
-        companyImage: annapurnaFinanceLogo,
+        companyImage: "assets/annapurna-finance-logo.png",
         workDescription: "Managing all the in-house software development into digital era.",
         imageName: "Annapurna Finance",
     },
@@ -20,7 +20,7 @@ export default [
         position: "Technology Innovation IT-Head",
         companyWebsiteUrl: "#",
         companyWebsiteName: "Jayam Solutions",
-        companyImage: jayamLogo,
+        companyImage: "assets/jayam-logo.png",
         workDescription: "Managing all the in-house software development into digital era.",
         imageName: "Jayam Solutions",
     },
@@ -30,7 +30,7 @@ export default [
         position: "Technology Innovation IT-Head",
         companyWebsiteUrl: "#",
         companyWebsiteName: "GFK Softwares",
-        companyImage: gfkLogo,
+        companyImage: "assets/gfk-logo.png",
         workDescription: "Managing all the in-house software development into digital era.",
         imageName: "GFK Softwares",
     },
@@ -40,7 +40,7 @@ export default [
         position: "Technology Innovation IT-Head",
         companyWebsiteUrl: "#",
         companyWebsiteName: "Kantar TNS",
-        companyImage: kantarTnsLogo,
+        companyImage: "assets/gfk-logo.png",
         workDescription: "Managing all the in-house software development into digital era.",
         imageName: "Kantar TNS",
     }

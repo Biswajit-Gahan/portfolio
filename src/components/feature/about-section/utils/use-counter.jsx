@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 
 export default function useCounter(isIntersect, count) {
     const [counter, setCounter] = useState(0);
-    const speed = 700;
+    const speed = 150;
     let localCounter = 0;
 
     useEffect(() => {

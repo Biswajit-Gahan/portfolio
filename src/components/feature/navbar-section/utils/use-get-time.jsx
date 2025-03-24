@@ -12,7 +12,7 @@ export default function useGetTime() {
             const meridian = hourAndMeridian.split(" ")[1];
             const minute = new Date(currentDate).toLocaleString("en-US", {timeZone: "Asia/Kolkata", minute: "2-digit"});
 
-            let date = `${weekDay}, ${hour}:${minute < 10 ? `0${minute}`: minute} ${meridian}`;
+            let date = `${weekDay}, ${hour}:${+minute < 10 ? `0${minute}`: minute} ${meridian}`;
             setTime(date);
         }, 1000);
 
